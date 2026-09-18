@@ -13,7 +13,9 @@ public class Main {
 
         System.out.println(variable); //400
 
-        byte
+        byte variableByte;
+        variableByte=(byte)variable;
+        System.out.println(variableByte); // -112
 
 
     }
