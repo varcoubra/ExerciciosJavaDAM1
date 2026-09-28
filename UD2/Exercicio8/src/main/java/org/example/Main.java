@@ -15,24 +15,31 @@ public class Main {
 
         n = teclado.nextInt();
 
-        a = n / 1000;
-        b = n % 1000 / 100;
-        c = n % 1000 % 100 / 10;
-        d = n % 1000 % 100 % 10;
+        if (n > 999 && n < 10000) {
 
-        System.out.printf("Millares: %d Centenas: %d Decenas: %d Unidades: %d", a, b, c, d);
+            a = n / 1000;
+            b = n % 1000 / 100;
+            c = n % 1000 % 100 / 10;
+            d = n % 1000 % 100 % 10;
 
-        if(c >= 5) {
-            b += 1;
-            c = 0;
-            d = 0;
+            System.out.printf("Millares: %d Centenas: %d Decenas: %d Unidades: %d", a, b, c, d);
+
+            if(c >= 5) {
+                b += 1;
+                c = 0;
+                d = 0;
+            }
+            else {
+                c = 0;
+                d = 0;
+            }
+
+            System.out.printf("\n%d%d%d%d\n", a, b, c, d);
+        } else {
+            System.out.println("Número erróneo");
         }
-        else {
-            c = 0;
-            d = 0;
-        }
 
-        System.out.printf("\n%d%d%d%d\n", a, b, c, d);
+
 
     }
 }
