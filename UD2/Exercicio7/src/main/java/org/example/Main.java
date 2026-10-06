@@ -1,35 +1,17 @@
 package org.example;
 
-import java.util.Scanner;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+        IO.println(String.format("Hello and welcome!"));
 
-        Scanner teclado = new Scanner(System.in);
-
-        int hora, minutos;
-
-        System.out.println("Indica a hora e minutos (separados por espacio): ");
-        hora = teclado.nextInt();
-        minutos = teclado.nextInt();
-
-        //Cálculos
-        if (hora >23 || hora < 0 || minutos > 59)
-            System.out.println("Esa hora es incorrecta");
-        else
-            if (hora >= 12) {
-                if (hora > 12)
-                    hora -= 12; // horas = horas - 12
-                System.out.printf("%02d:%02d PM %n", hora, minutos);
-            }
-            else
-                if (hora == 0)
-                    hora +=12;
-                System.out.printf("%02d:%02d AM %n", hora, minutos);
-
-
-
+        for (int i = 1; i <= 5; i++) {
+            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
+            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
+            IO.println("i = " + i);
+        }
     }
 }
