@@ -11,11 +11,16 @@ public class Main {
         System.out.print("\nIntroduzca o número de filas: ");
         int n = teclado.nextInt();
 
-        int a = 1;
+        int inicial = 1;
 
-        for (int i = 0; i < n; i++) {
+        for (int filas = 0; filas < n; filas++) {
 
-            for (int i = 0; i < n; i++) {
+            System.out.println("");
+
+            for (int columnas = 0; columnas <= filas; columnas++) {
+
+                System.out.print(" " + inicial + " ");
+                inicial++;
 
             }
 
