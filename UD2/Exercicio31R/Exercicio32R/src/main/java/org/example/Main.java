@@ -14,13 +14,13 @@ public class Main {
         System.out.println("En binario é: " + binario(n));
     }
 
-    public static String binario (int n) {
+    public static int binario (int n) {
 
         String binario = "";
         while (n >= 1) {
             binario = (n % 2) + binario;
             n /= 2;
         }
-        return binario;
+        return Integer.parseInt(binario);
     }
 }
