@@ -30,6 +30,16 @@ public class Main {
             System.out.print("Qué cometiches?: ");
             entrada = teclado.nextInt();
 
+
+            // 0 = Graza, 1 = Leve, 2 = Grave.
+
+            // Estado  1    2       3
+            //   0     1    2       0
+            //   1     1    2       0
+            //   2     2    2       2
+
+            // estado 3 = salvación, 4 = purgatorio, 5 = condena eterna;
+
             if (estado == 0) {
                 if (entrada == 1)
                     estado = 1;
@@ -55,13 +65,14 @@ public class Main {
                 case 0 -> System.out.println("Alma en estado: Graza");
                 case 1 -> System.out.println("Alma en estado: Leve");
                 case 2 -> System.out.println("Alma en estado: Grave");
-                case 3 -> System.out.println("Obtuviche a salvación");
+                case 3 -> System.out.println("Tes a salvación");
                 case 4 -> System.out.println("Estás no purgatorio, e tendrás a salvación");
                 case 5 -> System.out.println("Estás condenado eternamente");
             }
             System.out.println("**************\n");
 
         } while (entrada >= 1 && entrada < 4);
+
 
 
     }
